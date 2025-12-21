@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo apt install zsh
+sudo apt install zsh curl
 chsh -s /bin/zsh
 sudo rm -r ~/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended

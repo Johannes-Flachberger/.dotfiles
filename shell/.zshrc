@@ -79,9 +79,13 @@ ZSH_THEME="gnzh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
+	tmux
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 )
+
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=true
 
 source $ZSH/oh-my-zsh.sh
 

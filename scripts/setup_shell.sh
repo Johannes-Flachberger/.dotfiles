@@ -1,10 +1,12 @@
 #!/bin/sh
-sudo apt install zsh curl stow
+set -x
+sudo apt install zsh curl stow tmux
 chsh -s /bin/zsh
 sudo rm -r ~/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-echo "done"
 mv ~/.zshrc ~/.zshrc.bak
-stow -d ~/.dotfiles -t ~ zsh
+stow -d ~/.dotfiles -t ~ shell
+echo "all done"
+zsh
